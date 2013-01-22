@@ -25,3 +25,9 @@ task serve: [:build_haml, :build_sass] do
   puts "---[ Building Jekyll ] ----------------------------------------------------------"
   system %(jekyll --pygments --no-lsi --safe --server)
 end
+
+task publish: [:build_haml, :build_sass] do
+  system %(git add .)
+  system %(git commit)
+  system %(git push)
+end
