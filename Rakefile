@@ -4,21 +4,24 @@ def each_file(pattern, &block)
 end
 
 task :build_haml do
+  puts "---[ Building HAML ] ------------------------------------------------------------"
   each_file "/_layouts/*.haml" do |haml_file|
-    system %(haml #{haml_file} #{haml_file.gsub(/.haml$/, '.html')})
+    puts "   buid: #{haml_file}"
+    system %(haml --format html5 -q --trace #{haml_file} #{haml_file.gsub(/.haml$/, '.html')})
   end
 end
 
 task :build_sass do
-  each_file "/stylesheets/styles.sass" do |sass_file|
-    system %(sass #{sass_file} #{sass_file.gsub(/.sass$/, '.css')})
-  end
+  puts "---[ Building SASS ] ------------------------------------------------------------"
+  system %(compass compile)
 end
 
 task build: [:build_haml, :build_sass] do
+  puts "---[ Building Jekyll ] ----------------------------------------------------------"
   system %(jekyll --pygments --no-lsi --safe)
 end
 
 task serve: [:build_haml, :build_sass] do
+  puts "---[ Building Jekyll ] ----------------------------------------------------------"
   system %(jekyll --pygments --no-lsi --safe --server)
 end

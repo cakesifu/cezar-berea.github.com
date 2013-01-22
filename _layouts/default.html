@@ -1,23 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8' />
-    <meta content='chrome=1' http-equiv='X-UA-Compatible' />
+    <meta charset="utf-8">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
     <title>cezarberea.ro {{page.title}}</title>
-    <link href='stylesheets/styles.css' rel='stylesheet' />
-    <link href='stylesheets/pygment_trac.css' rel='stylesheet' />
-    <meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport' />
+    <link href="stylesheets/screen.css" media="screen" rel="stylesheet">
+    <link href="stylesheets/print.css" media="print" rel="stylesheet">
+    <link href="stylesheets/pygment_trac.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
     <!--[if lt IE 9]>
-      <script src='//html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link href="stylesheets/ie.css" media="screen" rel="stylesheet">
     <![endif]-->
   </head>
   <body>
-    <header id='page-header'>
-      {{page.title}}
-    </header>
-    <section id='sidebar'></section>
-    <div id='content'>
-      {{content}}
+    <div id="container">
+      <header id="header">
+        {{page.title}}
+      </header>
+      <section id="sidebar"></section>
+      <div id="content">
+        {{content}}
+      </div>
     </div>
   </body>
 </html>
