@@ -1,0 +1,18 @@
+{
+  "author": "Cezar Berea",
+  "name": "jekyll-dev",
+  "version": "0.0.0",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-livereload": "*",
+    "grunt-jekyll": "*",
+    "grunt-compass": "*",
+    "grunt-reload": "*"
+  },
+  "devDependencies": {
+
+  }
+}

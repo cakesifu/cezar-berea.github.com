@@ -1,3 +1,4 @@
-_site
 .sass-cache
 .rvmrc
+_site
+node_modules

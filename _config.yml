@@ -1,3 +1,13 @@
 ---
-exclude: Gemfile, Gemfile.lock, Rakefile, config.rb, params.json, .rvmrc
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.coffee
+  - config.rb
+  - params.json
+  - package.json
+  - .rvmrc
+  - .gitignore
+  - node_modules
+  - .sass-cache
 ---

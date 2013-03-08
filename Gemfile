@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rake'
 
+# keep up with the versions from github
+# https://help.github.com/articles/using-jekyll-with-pages
 gem 'jekyll',     '=0.12.0'
 gem 'liquid',     '=2.4.1'
 gem 'redcarpet',  '=2.1.1'
