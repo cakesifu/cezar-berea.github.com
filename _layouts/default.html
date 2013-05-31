@@ -15,12 +15,16 @@
   </head>
   <body>
     <div id="container">
-      <header id="header">
-        {{page.title}}
+      <header id="header" class="hero-unit">
+        <h1 class="page-header">{{page.title}}</h1>
       </header>
-      <section id="sidebar"></section>
-      <div id="content">
-        {{content}}
+      <div id="content" class="row-fluid">
+          <div id="posts" class="span8">
+            {{content}}
+          </div>
+          <section id="sidebar" class="span4">
+            saidbar
+          </section>
       </div>
     </div>
   </body>

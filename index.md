@@ -1,6 +1,7 @@
 ---
 layout: default
+title: Work in Progress
 ---
 
-# Work in progress :D
+Still working on this
 
