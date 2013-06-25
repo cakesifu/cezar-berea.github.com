@@ -1,0 +1,11 @@
+---
+exclude:
+  - node_modules
+  - .gitignore
+  - .rvmrc
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - params.json 
+---

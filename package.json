@@ -1,0 +1,15 @@
+{
+  "name": "cezar-berea.github.com",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "BSD",
+  "gitHead": "2323bfd2ab80b7183b88276a15fc211e71c10b6c",
+  "dependencies": {
+    "grunt-jekyll": "~0.3.8",
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-exec": "~0.4.2"
+  }
+}
