@@ -14,9 +14,17 @@ module.exports = function(grunt) {
         cmd: 'jekyll'
       }
     },
+    less: {
+      dev: {
+        files: {
+          "stylesheets/less.css": "less/less.less"
+        }
+      }
+    },
     watch: {
-      options: {
-        livereload: true
+      less: {
+        files: ["less/**/*.less"],
+        tasks: ["less:dev"],
       },
       src: {
         files: [
@@ -24,7 +32,10 @@ module.exports = function(grunt) {
           '*.html',
           'stylesheets/**/*.css'
         ],
-        tasks: ['jekyll']
+        tasks: ['jekyll'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
@@ -32,7 +43,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('jekyll', 'exec:jekyll');
-  grunt.registerTask('default', ['jekyll', 'connect:server' , 'watch']);
+  grunt.registerTask('default', ["less:dev", 'jekyll', 'connect:server' , 'watch']);
 };
