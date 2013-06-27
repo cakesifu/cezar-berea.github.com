@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     },
     exec: {
       jekyll: {
-        cmd: 'jekyll'
+        cmd: 'jekyll build --future --drafts'
       }
     },
     less: {
@@ -30,7 +30,10 @@ module.exports = function(grunt) {
         files: [
           'javascripts/**/*.js',
           '*.html',
-          'stylesheets/**/*.css'
+          'stylesheets/**/*.css',
+          '_posts/**/*.*',
+          '_layouts/**/*.*',
+          '_includes/**/*.*'
         ],
         tasks: ['jekyll'],
         options: {
