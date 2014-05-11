@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     less: {
       dev: {
         files: {
-          "stylesheets/less.css": "less/less.less"
+          "styles/main.css": "less/main.less"
         }
       }
     },
@@ -28,9 +28,9 @@ module.exports = function(grunt) {
       },
       src: {
         files: [
-          'javascripts/**/*.js',
+          'scripts/**/*.js',
           '*.html',
-          'stylesheets/**/*.css',
+          'styles/**/*.css',
           '_posts/**/*.*',
           '_layouts/**/*.*',
           '_includes/**/*.*'
@@ -49,5 +49,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('jekyll', 'exec:jekyll');
-  grunt.registerTask('default', ["less:dev", 'jekyll', 'connect:server' , 'watch']);
+  grunt.registerTask('server', ["less:dev", 'jekyll', 'connect:server' , 'watch']);
+  grunt.registerTask('build', ["less:dev", 'jekyll']);
 };
