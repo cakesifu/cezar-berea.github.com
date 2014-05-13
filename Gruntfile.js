@@ -5,7 +5,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 3000,
-          base: '_site'
+          base: '_site',
+          hostname: "*"
         }
       }
     },
@@ -15,6 +16,12 @@ module.exports = function(grunt) {
       }
     },
     less: {
+      options: {
+        paths: [
+          "./",
+          "./bower_components"
+        ]
+      },
       dev: {
         files: {
           "styles/main.css": "less/main.less"

@@ -10,6 +10,7 @@ server:
 configure:
 	npm install
 	bundle install
+	bower install
 
 clean:
 	echo "TODO write clean task"
