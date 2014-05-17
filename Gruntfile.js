@@ -24,7 +24,12 @@ module.exports = function(grunt) {
       },
       dev: {
         files: {
-          "styles/main.css": "less/main.less"
+          "_site/styles/main.css": "less/main.less"
+        }
+      },
+      dist: {
+        files: {
+          "_site/styles/main.css": "less/main.less"
         }
       }
     },
@@ -37,12 +42,11 @@ module.exports = function(grunt) {
         files: [
           'scripts/**/*.js',
           '*.html',
-          'styles/**/*.css',
           '_posts/**/*.*',
           '_layouts/**/*.*',
           '_includes/**/*.*'
         ],
-        tasks: ['jekyll'],
+        tasks: ['build'],
         options: {
           livereload: true
         }
@@ -56,6 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('jekyll', 'exec:jekyll');
-  grunt.registerTask('server', ["less:dev", 'jekyll', 'connect:server' , 'watch']);
-  grunt.registerTask('build', ["less:dev", 'jekyll']);
+  grunt.registerTask('build', ['jekyll', "less:dist"]);
+  grunt.registerTask('build:dev', ['jekyll', "less:dev"]);
+  grunt.registerTask('server', ['build:dev', 'connect:server' , 'watch']);
 };
